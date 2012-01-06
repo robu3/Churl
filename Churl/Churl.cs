@@ -10,7 +10,7 @@ using System.Collections.Specialized;
 namespace churl
 {
     /// <summary>
-    /// chURL: C# library for POSTing and GETing data over HTTP(S). Or a peon to do your HTTP bidding.
+    /// chURL: C# library for sending and receiving data over HTTP(S). Or a peon to do your HTTP bidding.
     /// </summary>
     public static class Churl
     {
@@ -43,6 +43,7 @@ namespace churl
                     request.Headers.Add(key, headers[key]);
                 }
             }
+
             // for non-GET requests, write any data to transmit to the request stream
             if (method != "GET" && data.Length > 0)
             {
